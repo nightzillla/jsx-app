@@ -7,12 +7,17 @@ const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
 // Step 4 Create a component
 function App () {
+    // Time
+    const date = new Date ();
+    const time = date.toLocaleTimeString();
+    // Same as return <h1>{new Date().toLocaleTimeString()}</h1>
+    // RNG
     let message = 'Bye there!'
     if(Math.random() > 0.5){
         message = 'Hello there!';
     }
 
-    return <h1>{message}</h1>
+    return <h1>{time}</h1>
 }
 // Step 5 Show the component on the screen 
 root.render(<App />);
